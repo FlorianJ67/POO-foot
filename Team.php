@@ -28,7 +28,7 @@ class Team {
             $bd = date_create($player->getBirthday());
             $td = date_create();
             $age = date_diff($bd,$td);
-            echo $player->getFName()." ".$player->getName()." ".$age->y." ans ".$player->getNationality()->getName()."<br>";
+            echo $player->getFName()." ".$player->getName()." ".$age->y." ans Nationalité: ".$player->getNationality()->getName()."<br>";
         }
     }
 
