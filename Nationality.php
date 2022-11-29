@@ -1,55 +1,29 @@
 <?php
-class Player {
+class Nationality {
     protected $_name;
-    protected $_fName;
-    protected $_sexe;
-    protected $_birthday;
-    protected $_nationality;
-    protected $_contract;
+    protected $_players;
         
-    public function __construct(string $fName,string $name,string $sexe,$birthday){
+    public function __construct(string $name){
         $this->_name = $name;
-        $this->_fName = $fName;
-        $this->_sexe = $sexe;
-        $this->_birthday = $birthday;
-        $this->_contract = [];
+        $this->_players = [];
     }
             
     //GET
     public function getName(){
         return $this->_name;
     }
-    public function getFName(){
-        return $this->_fName;
-    }
-    public function getsexe(){
-        return $this->_sexe;
-    }
-    public function getBirthday(){
-        return $this->_birthday;
-    }
 
-    public function displayFullName(){
-        $this->getFName();
-        return " ";
-        $this->getName();
-    }
         
     //SET
     public function setName($name){
         $this->_name = $name;
     }
-    public function setFName($fName){
-        $this->_fName = $fName;
-    }
-    public function setSexe($sexe){
-        $this->_sexe = $sexe;
-    }
-    public function setBirthday($birthday){
-        $this->_birthday = $birthday;
-    } 
     public function setNationality($nationality){
         $this->_nationality = $nationality;
     } 
+
+    public function addPlayer($player){
+        array_push($this->_players,$player);
+    }
 }
 ?>

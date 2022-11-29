@@ -13,7 +13,7 @@ class Player {
         $this->_sexe = $sexe;
         $this->_birthday = $birthday;
         $this->_nationality = $nationality;
-        $this->_nationality->addNationality($this);
+        $this->_nationality->addPlayer($this);
         $this->_contract = [];
 
     }
@@ -30,6 +30,9 @@ class Player {
     }
     public function getBirthday(){
         return $this->_birthday;
+    }
+    public function getNationality(){
+        return $this->_nationality;
     }
 
     public function displayFullName(){
@@ -54,5 +57,9 @@ class Player {
     public function setNationality($nationality){
         $this->_nationality = $nationality;
     } 
+
+    public function addToContract($newPlayer){
+        array_push($this->_contract,$newPlayer);
+    }
 }
 ?>

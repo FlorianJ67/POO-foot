@@ -7,7 +7,7 @@ class Contract {
         
     public function __construct(Team $team,Player $player,$date){
         $this->_team = $team;
-        $this->_team->addToContract($this);
+        $this->_team->addPlayer($player);
 
         $this->_player = $player;
         $this->_player->addToContract($this);
